@@ -1,0 +1,10 @@
+ZPN - Archive to Call Buffer V4.3.18
+
+- Added Browse TAR Contents under the Advanced tab.
+- Opens a TAR without extracting it and displays every entry, type, size, and timestamp.
+- Uses a virtual searchable list so large TAR directories do not create one UI control per entry.
+- Indexing and extraction run away from the UI thread and can be cancelled.
+- Extracts exactly one selected regular file to a user-selected destination folder.
+- Uses the entry's safe basename, preventing TAR path traversal outside the selected folder.
+- Confirms replacement, writes through a .partial file, removes failed partial output,
+  atomically publishes the completed file, and preserves its timestamp.

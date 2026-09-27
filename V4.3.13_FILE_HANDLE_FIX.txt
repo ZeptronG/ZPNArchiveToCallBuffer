@@ -1,0 +1,8 @@
+ZPN - Archive to Call Buffer V4.3.13
+
+Fixes the Windows file-in-use error that occurred after a TAR entry was written.
+The .partial destination stream is now flushed and fully closed before the file
+is atomically renamed to its final WAV or XML name.
+
+All V4.3.12 performance, stability, logging, storage, cancellation, resume, and
+TAR deletion safeguards remain in place.

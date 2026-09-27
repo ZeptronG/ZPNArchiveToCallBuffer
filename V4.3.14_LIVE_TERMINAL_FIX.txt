@@ -1,0 +1,12 @@
+ZPN - Archive to Call Buffer V4.3.14
+
+The native processing engine now runs entirely outside the WinForms UI thread.
+This allows the existing bounded terminal queue to be drained every 100 ms while
+directory enumeration, TAR indexing, transfer, and CSV logging are active.
+
+The RichTextBox remains because it provides useful status colors and performs
+well when updated in bounded batches. Terminal history remains capped and noisy
+messages remain suppressible under extreme load. CSV logging is unaffected.
+
+The Stop button and other window interactions remain responsive during scanning
+as well as during file transfer.

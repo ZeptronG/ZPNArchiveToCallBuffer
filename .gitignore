@@ -1,0 +1,56 @@
+# Visual Studio / .NET
+.vs/
+.vscode/
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+*.userosscache
+*.userprefs
+*.ide
+debug/
+release/
+*.pdb
+*.dll
+*.exe
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.nupkg
+publish/
+Publish/
+*.publishsettings
+
+# Rider
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+packages/
+.nuget/
+project.lock.json
+
+# Azure DevOps
+*.publishsettings
+
+# Rider and Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Local history
+.localhistory/
+
+# JetBrains
+.idea/
+
+# Keep build artifacts out
+**/bin/
+**/obj/
+
+# Visual Studio Code workspace
+*.code-workspace

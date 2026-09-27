@@ -1,0 +1,13 @@
+ZPN - Archive to Call Buffer V4.3.17
+
+- Saves the validated settings used at the start of each process to ZPN.config
+  beside the application.
+- ZPN.config is written through a temporary file and atomic replacement so an
+  interrupted write does not leave a partial configuration.
+- Loads Source, Destination, workers, recursion, clear-log choice, logging mode,
+  and low-space reserve automatically at the next application startup.
+- Temp and Log remain automatically derived from Destination.
+- Prior TAR-deletion use is recorded but never automatically unlocked or enabled;
+  the deletion passcode remains required after every application launch.
+- Proccess.log now contains a SETTINGS USED FOR THIS PROCESS section with every
+  effective path, worker, search, logging, storage, and deletion setting.

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<TargetPlatformMoniker>Windows,Version=7.0</TargetPlatformMoniker>
+		<TargetPlatformDisplayName>Windows 7.0</TargetPlatformDisplayName>
+
+		<!-- Single EXE settings -->
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<SelfContained>true</SelfContained>
+		<PublishSingleFile>true</PublishSingleFile>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+
+		<!-- Application -->
+		<AssemblyName>ZPN - Archive to Call Buffer V4.3.19</AssemblyName>
+		<ApplicationIcon>zep.ico</ApplicationIcon>
+
+		<Version>4.3.19</Version>
+		<AssemblyVersion>4.3.19.0</AssemblyVersion>
+		<FileVersion>4.3.19.0</FileVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Compile icon into application -->
+		<Content Include="zep.ico" />
+
+	</ItemGroup>
+
+</Project>

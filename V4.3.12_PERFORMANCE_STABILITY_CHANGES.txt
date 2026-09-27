@@ -1,0 +1,21 @@
+ZPN - Archive to Call Buffer V4.3.12
+
+Performance and stability patch
+
+- Native C# TAR processing; no PowerShell child processes.
+- Fixed-size TAR worker pool (1-16) and bounded TAR/log/UI queues.
+- Conservative default of 2 workers for lower-end systems and HDDs.
+- TAR entries stream directly to Destination; Temp remains available for compatibility.
+- 256 KB pooled sequential/asynchronous copy buffers limit per-worker memory use.
+- Partial files use a .partial suffix and are removed after failed/cancelled writes.
+- Coordinated free-space reservations prevent workers collectively crossing the configured reserve.
+- Storage stop prevents new pairs while active work exits safely; incomplete TARs are not completed/deleted.
+- CSV has a single writer. Important lifecycle rows are acknowledged and flushed; routine batching is bounded.
+- Terminal output is queued, batch-rendered, throttled under load, and capped at 750,000 characters.
+- Cancellation is checked during discovery, TAR passes, queue waits, and each buffered read/write.
+- Start/Stop and settings have explicit run-state control.
+- Resume detection reads TAR_COMPLETE rows from previous legacy audio CSV files.
+- Existing pairing, 15-digit INUM validation, 6/3/2/2 layout, no-overwrite protection,
+  timestamps, recursive search, standalone pairs, logging modes, storage warning, and protected TAR deletion remain.
+
+Recommended workers: 2 for HDD/lower-end hardware, 3-4 for SATA SSD, 4-8 only for fast NVMe.

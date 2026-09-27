@@ -1,0 +1,8 @@
+ZPN - Archive to Call Buffer V4.3.19
+
+- TAR Browser supports selecting and extracting multiple regular files at once.
+- All selected entries are extracted during one sequential TAR pass.
+- Existing output files can be replaced as a group, skipped as a group, or cancelled.
+- Conflicting selected entries with the same output basename are detected first.
+- New operational CSV files are named Audiolog_yyyyMMdd_HHmmss.csv.
+- Resume and clear-old-log behavior remains compatible with legacy VerintAudio logs.

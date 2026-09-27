@@ -1,0 +1,10 @@
+ZPN - Archive to Call Buffer V4.3.16
+
+- Added an Exit button aligned at the bottom-right of the window.
+- Exit uses the existing safe-close confirmation while processing is active.
+- Temp is automatically set to <Destination>\Temp.
+- Log folder is automatically set to <Destination>\Logs.
+- Temp and Log fields are read-only and update whenever Destination changes.
+- Destination, Temp, and Logs are automatically created during validated startup.
+- All existing processing, logging, cancellation, resume, storage, and deletion
+  safeguards remain unchanged.

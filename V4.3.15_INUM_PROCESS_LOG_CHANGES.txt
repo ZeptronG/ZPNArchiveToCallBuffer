@@ -1,0 +1,12 @@
+ZPN - Archive to Call Buffer V4.3.15
+
+- INUM values are emitted as Excel text cells so all 15 digits display instead
+  of scientific notation such as 4.93001E+14.
+- At the end of every run, including Stop, Proccess.log is written to the chosen
+  Log folder.
+- Proccess.log lists completed TAR files, TAR files active when interrupted, and
+  every discovered TAR that still needs processing.
+- The final inventory re-scans Source after cancellation so files that had not
+  reached the bounded worker queue are included as NOT_STARTED.
+- Cancellation now awaits the producer and all fixed workers before final logs
+  are closed and the inventory is generated.
